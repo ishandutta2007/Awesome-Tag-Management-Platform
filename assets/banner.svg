@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#080d1a"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Glowing filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="lightGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Dynamic Flow Styles -->
+    <style>
+      @keyframes pulseFlow {
+        0% { stroke-dashoffset: 160; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseDot {
+        0%, 100% { opacity: 0.3; transform: scale(0.9); }
+        50% { opacity: 0.9; transform: scale(1.15); }
+      }
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(7px); }
+      }
+      @keyframes shimmer {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+
+      .flow-line {
+        stroke-dasharray: 8 12;
+        animation: pulseFlow 4s linear infinite;
+      }
+      .flow-line-fast {
+        stroke-dasharray: 6 10;
+        animation: pulseFlow 2.5s linear infinite;
+      }
+      .pulsing-node {
+        transform-origin: center;
+        animation: pulseDot 3s ease-in-out infinite;
+      }
+      .float-pill-1 {
+        animation: floatSlow1 5s ease-in-out infinite;
+      }
+      .float-pill-2 {
+        animation: floatSlow2 6s ease-in-out infinite;
+      }
+      .shimmer-circle {
+        animation: shimmer 4s ease-in-out infinite;
+      }
+      .foreground-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Subtle Matrix Grid -->
+  <g stroke="#334155" stroke-opacity="0.15" stroke-width="1">
+    <line x1="0" y1="70" x2="1200" y2="70"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="280" x2="1200" y2="280"/>
+    <line x1="0" y1="350" x2="1200" y2="350"/>
+    <line x1="120" y1="0" x2="120" y2="420"/>
+    <line x1="240" y1="0" x2="240" y2="420"/>
+    <line x1="360" y1="0" x2="360" y2="420"/>
+    <line x1="480" y1="0" x2="480" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+    <line x1="720" y1="0" x2="720" y2="420"/>
+    <line x1="840" y1="0" x2="840" y2="420"/>
+    <line x1="960" y1="0" x2="960" y2="420"/>
+    <line x1="1080" y1="0" x2="1080" y2="420"/>
+  </g>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="150" cy="100" r="120" fill="#0284c7" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1050" cy="320" r="140" fill="#7c3aed" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="980" cy="90" r="100" fill="#059669" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Dynamic Animated Circuit / Flow Paths (Background Layers) -->
+  <g fill="none">
+    <!-- Path 1: Client to Tag Container -->
+    <path d="M 120 320 C 220 320, 260 250, 360 250" stroke="#38bdf8" stroke-width="2.5" opacity="0.4"/>
+    <path d="M 120 320 C 220 320, 260 250, 360 250" stroke="#38bdf8" stroke-width="2.5" class="flow-line" filter="url(#lightGlow)"/>
+
+    <!-- Path 2: Tag Container to Server Container -->
+    <path d="M 440 250 C 540 250, 580 340, 680 340" stroke="#818cf8" stroke-width="2.5" opacity="0.4"/>
+    <path d="M 440 250 C 540 250, 580 340, 680 340" stroke="#818cf8" stroke-width="2.5" class="flow-line-fast" filter="url(#lightGlow)"/>
+
+    <!-- Path 3: Server Container to Destinations -->
+    <path d="M 760 340 C 860 340, 920 280, 1040 280" stroke="#c084fc" stroke-width="2.5" opacity="0.4"/>
+    <path d="M 760 340 C 860 340, 920 280, 1040 280" stroke="#c084fc" stroke-width="2.5" class="flow-line" filter="url(#lightGlow)"/>
+
+    <!-- Path 4: Secondary Route -->
+    <path d="M 440 250 C 580 200, 780 200, 1040 180" stroke="#34d399" stroke-width="2" opacity="0.3"/>
+    <path d="M 440 250 C 580 200, 780 200, 1040 180" stroke="#34d399" stroke-width="2" class="flow-line-fast"/>
+  </g>
+
+  <!-- Dynamic Pulsing Nodes -->
+  <g>
+    <!-- Node 1: Client Node -->
+    <circle cx="120" cy="320" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="120" cy="320" r="6" fill="#38bdf8" class="pulsing-node"/>
+
+    <!-- Node 2: Client Tag Container -->
+    <circle cx="400" cy="250" r="18" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="400" cy="250" r="8" fill="#818cf8" class="pulsing-node"/>
+
+    <!-- Node 3: Server-side Hub -->
+    <circle cx="720" cy="340" r="20" fill="#0f172a" stroke="#c084fc" stroke-width="2.5"/>
+    <circle cx="720" cy="340" r="10" fill="#c084fc" class="pulsing-node"/>
+
+    <!-- Node 4: Warehouse/Ad Network -->
+    <circle cx="1040" cy="280" r="15" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+    <circle cx="1040" cy="280" r="7" fill="#34d399" class="pulsing-node"/>
+  </g>
+
+  <!-- Animated Floating Feature Badges (Positioned cleanly away from center title) -->
+  <!-- Floating Pill 1 (Top Left) -->
+  <g class="float-pill-1" transform="translate(80, 45)">
+    <rect width="180" height="34" rx="17" fill="url(#pillGrad1)" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2"/>
+    <text x="90" y="22" fill="#bae6fd" font-size="12" font-weight="600" text-anchor="middle" class="foreground-text">⚡ Server-Side Tagging</text>
+  </g>
+
+  <!-- Floating Pill 2 (Top Right) -->
+  <g class="float-pill-2" transform="translate(930, 45)">
+    <rect width="190" height="34" rx="17" fill="url(#pillGrad2)" stroke="#a78bfa" stroke-opacity="0.5" stroke-width="1.2"/>
+    <text x="95" y="22" fill="#ede9fe" font-size="12" font-weight="600" text-anchor="middle" class="foreground-text">🛡️ Privacy &amp; GDPR First</text>
+  </g>
+
+  <!-- Floating Pill 3 (Bottom Right) -->
+  <g class="float-pill-1" transform="translate(930, 355)">
+    <rect width="180" height="34" rx="17" fill="url(#pillGrad3)" stroke="#34d399" stroke-opacity="0.5" stroke-width="1.2"/>
+    <text x="90" y="22" fill="#d1fae5" font-size="12" font-weight="600" text-anchor="middle" class="foreground-text">📊 First-Party Data Hub</text>
+  </g>
+
+  <!-- Floating Pill 4 (Bottom Left) -->
+  <g class="float-pill-2" transform="translate(80, 355)">
+    <rect width="190" height="34" rx="17" fill="url(#pillGrad1)" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2"/>
+    <text x="95" y="22" fill="#e0f2fe" font-size="12" font-weight="600" text-anchor="middle" class="foreground-text">📦 Self-Hosted Containers</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Title & Subtitle (Always in foreground, high contrast, guaranteed readable) -->
+  <g class="foreground-text">
+    <!-- Decorative Category Chip -->
+    <g transform="translate(485, 95)">
+      <rect width="230" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="115" y="19" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="1.5" text-anchor="middle">CURATED AWESOME LIST</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="170" fill="url(#accentGrad)" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="-0.5" filter="url(#lightGlow)">
+      Awesome Tag Management Platform
+    </text>
+    <text x="600" y="170" fill="#ffffff" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="-0.5">
+      Awesome Tag Management Platform
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="206" fill="#cbd5e1" font-size="16" font-weight="400" text-anchor="middle" letter-spacing="0.2">
+      Enterprise SaaS &amp; Open-Source Tag Containers, Server-Side Tracking &amp; Privacy Analytics
+    </text>
+
+    <!-- Highlights / Stats Bar -->
+    <g transform="translate(320, 230)">
+      <rect width="560" height="36" rx="8" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
+      <text x="90" y="23" fill="#38bdf8" font-size="12" font-weight="600" text-anchor="middle">🏷️ Client &amp; Server-Side</text>
+      <text x="195" y="23" fill="#475569" font-size="14" text-anchor="middle">•</text>
+      <text x="280" y="23" fill="#a78bfa" font-size="12" font-weight="600" text-anchor="middle">🔒 GDPR / CCPA Ready</text>
+      <text x="375" y="23" fill="#475569" font-size="14" text-anchor="middle">•</text>
+      <text x="465" y="23" fill="#34d399" font-size="12" font-weight="600" text-anchor="middle">⚡ Zero Vendor Lock-in</text>
+    </g>
+  </g>
+</svg>
