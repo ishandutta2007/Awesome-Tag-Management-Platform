@@ -1,6 +1,6 @@
 # Awesome-Tag-Management-Platform
 
-# Top Tag Management Platform Ecosystem
+## Top Tag Management Platform Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Self-Hosted Tag Containers, Server-Side Tracking & Privacy-Compliant Analytics*  
