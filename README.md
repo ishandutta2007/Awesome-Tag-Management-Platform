@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-squar&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Tag-Management-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Tag-Management-Platform?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Tag-Management-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Tag-Management-Platform?style=flat-square&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Tag-Management-Platform/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Tag-Management-Platform?style=flat-square&logo=github&color=blue" alt="GitHub Forks"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Tag-Management-Platform?style=flat-square&color=green" alt="License"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Tag-Management-Platform/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a>
@@ -68,7 +68,7 @@ The following table summarizes the prominent commercial and SaaS tag management 
 
 ## 💻 Open-Source Tag Management & Event Routing Engines
 
-Below is a comprehensive collection of active open-source tag containers, server-side data collection hubs, and GTM developer utilities. Repositories are sorted in **descending order by GitHub star count**.
+Below is a comprehensive collection of active open-source tag containers, server-side data collection hubs, and GTM developer utilities. Repositories are sorted in **descending order by GitHub Stars_Count**.
 
 1. **[Snowplow](https://github.com/snowplow/snowplow)** [![Stars](https://img.shields.io/github/stars/snowplow/snowplow?style=social&color=white)](https://github.com/snowplow/snowplow/stargazers) — **The enterprise leader in customer data infrastructure & behavioral event pipelines.** Provides high-throughput server-side event collectors, real-time validation against JSON schemas, and deterministic streaming directly to data warehouses and marketing destinations without third-party vendor leakage.
 2. **[Jitsu](https://github.com/jitsucom/jitsu)** [![Stars](https://img.shields.io/github/stars/jitsucom/jitsu?style=social&color=white)](https://github.com/jitsucom/jitsu/stargazers) — **Fully scriptable open-source data ingestion engine and tag/event delivery platform.** Serves as a modern open-source alternative to Segment and server-side GTM; captures client-side and server-side events, transforms them via JavaScript routines in real-time, and dispatches them to hundreds of analytics, CRM, and ad storage endpoints.
@@ -138,7 +138,7 @@ We welcome contributions from marketers, developers, and privacy engineers! To a
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a new branch** (`git checkout -b feature/add-new-tag-manager`).
 3. 📝 **Add or update entries** in `README.md` maintaining table and markdown consistency:
-   - Provide the project name, official URL, and exact GitHub star count badge for open-source entries.
+   - Provide the project name, official URL, and exact GitHub Stars_Count badge for open-source entries.
    - For SaaS products, include exact company scale, specific starting tier pricing, and explicit free tier or trial limits.
 4. 🚀 **Commit your changes** (`git commit -m "Add New Tag Management Project"`).
 5. 📬 **Submit a Pull Request** with a concise description of why the tool qualifies.
